@@ -96,21 +96,27 @@
       <div class="sorteio-date w-100 text-center" style="margin-top: 5px;">
         <br>
         <h1 style="font-size: 0.72rem;">Comprar mais títulos aumenta suas chances de ganhar!</h1>
+          <div class="container-principal">
+      <div class="contador-cotas">
+        <span>
+          <button type="button" class="btn-contador-cotas" onclick="decrementar()">-</button>
+        </span>
+        <input type="number" id="numero" class="input-contador-cotas" value="0" min="0" oninput="highlightButton()">
+        <span>
+          <button type="button" class="btn-contador-cotas" onclick="incrementar()">+</button>
+        </span>
+      </div>
+      <button type="button" id="btn-adicionar-carrinho" class="adc-carrinho" onclick="adicionarAoCarrinho()" disabled="">
+        <i class="bi bi-cart-fill"></i> Comprar </button>
+      <div class="sorteio-date w-100 text-center" style="margin-top: 5px;">
+        <br>
+        <h1 style="font-size: 0.72rem;">Comprar mais títulos aumenta suas chances de ganhar!</h1>
         <div class="container-principal">
-          <div class="">
-            <div class="card-">
-              <div class="card--image">
-                <img src="images/logo-hospital.">
-                <h2>Instituição beneficiada</h2>
-              </div>
-              <div class="card-hospital-text">
-                <p>Instituto Ronald McDonald, fundado em 08 de novembro de 1965 por Lucilla Pinto Ballalai, foi originalmente chamado Centro Norte Paranaense de Pesquisas Médicas. Criado com o objetivo de melhorar o tratamento do câncer e a qualidade de vida, o hospital focava inicialmente na prevenção do câncer de colo de útero entre as mulheres de Londrina e região. A instituição sempre buscou aprimorar seus recursos humanos, científicos e tecnológicos.</p>
-              </div>
-            </div>
-            <div class="card-hospital card-hospital-bg-azul">
+          <div class="hospital">
+            <div class="card-hospital">
               <div class="card-hospital-image">
-                <img src="images/viva-hosp.png">
-                <h2>SBT Prêmios</h2>
+                <img src="images/logo-hospital.svg">
+                <h2>Instituição beneficiada</h2>
               </div>
               <div class="card-hospital-text">
                 <p>O SBT Prêmios é uma inovadora plataforma de venda de títulos de capitalização na modalidade filantropia premiável, emitidos pela Icatu Capitalização S.A. (CNPJ 74.267.170/0001-73). Ao adquirir os títulos disponíveis neste portal, você passa a ter a possibilidade de concorrer a prêmios em dinheiro e a viver experiências únicas nos bastidores do SBT, enquanto contribui com o Instituto Ronald McDonald na missão de apoiar jovens na luta contra o câncer.</p>
