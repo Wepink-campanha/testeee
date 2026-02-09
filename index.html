@@ -37,9 +37,29 @@
       </div>
     </div>
     <div class="-date w-100 text-center">
-      <h1>Sorteio <span style="background-color: #f0ad4e;" id="contador">HOJE!</span> por apenas <span style="background-color: #2f4eb5;">R$1,99</span>
+        <h1>Sorteio em <span style="background-color: #f0ad4e;" id="contador">2 dias</span> por apenas <span style="background-color: #2f4eb5;">R$1,99</span>
       </h1>
     </div>
+    <script>
+      function atualizarContador() {
+        // Obter o elemento span pelo ID
+        var span = document.getElementById('contador');
+        // Obter a data atual
+        var hoje = new Date();
+        // Calcular o número de dias restantes até a próxima terça-feira (0 para terça-feira, 1 para quarta-feira, ..., 6 para segunda-feira)
+        var diasRestantes = 7 - hoje.getDay();
+        // Se for terça-feira, reinicie o contador para 7 dias
+        if (diasRestantes === 0) {
+          diasRestantes = 7;
+        }
+        // Atualizar o conteúdo do span
+        span.textContent = diasRestantes === 1 ? '1 dia' : diasRestantes + ' dias';
+      }
+      // Chamar a função para atualizar o contador quando a página carregar
+      atualizarContador();
+      // Chamar a função para atualizar o contador a cada 24 horas
+      setInterval(atualizarContador, 24 * 60 * 60 * 1000);
+    </script>
     <div class="container-principal">
       <!-- BANNER -->
       <!-- COTAS -->
